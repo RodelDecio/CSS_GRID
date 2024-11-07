@@ -1,0 +1,14 @@
+<div class="wishlist-container">
+    <h2>Wishlist</h2>
+    <div class="grid">
+      <div class="wishlist-item" *ngFor="let item of wishlist">
+        <img [src]="item.image" alt="{{ item.name }}" />
+        <div class="item-details">
+          <h3>{{ item.name }}</h3>
+          <p>Category: {{ item.category }}</p>
+          <p>Price: ₱{{ item.price | number }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

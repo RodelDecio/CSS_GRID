@@ -1,0 +1,16 @@
+<div class="cart-container">
+    <h2>Your Cart</h2>
+    <div class="cart-grid">
+      <div class="cart-item" *ngFor="let item of cart">
+        <img [src]="item.image" alt="{{ item.name }}" class="item-image" />
+        <h3>{{ item.name }}</h3>
+        <p>Quantity: {{ item.quantity }}</p>
+        <p>Unit Price: ₱{{ item.unitPrice | number }}</p>
+        <p>Total Price: ₱{{ item.totalPrice | number }}</p>
+      </div>
+    </div>
+    <div class="cart-total">
+      <h3>Grand Total: ₱{{ grandTotal | number }}</h3>
+    </div>
+  </div>
+  
